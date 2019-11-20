@@ -11,6 +11,12 @@ As the basic task of point cloud learning, classification is fundamental but alw
   <img width="600" src="https://github.com/ShiQiu0419/Geometric-Feedback-Network-for-Point-Cloud-Classification/blob/master/overview2.png">
 </p>
 
+## Experimental Results
+Synthetic Dataset: ModelNet40
+<p align="center">
+  <img width="600" src="https://github.com/ShiQiu0419/GFNet/blob/master/modelnet40.png">
+</p>
+
 ## Paper
 **Will be released later..**
 
