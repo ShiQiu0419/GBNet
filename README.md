@@ -19,7 +19,7 @@ Synthetic Dataset: ModelNet40
 
 Real-object Dataset: ScanObjectNN
 <p align="center">
-  <img width="600" src="https://github.com/ShiQiu0419/GFNet/blob/master/scanobjectnn.png">
+  <img width="900" src="https://github.com/ShiQiu0419/GFNet/blob/master/scanobjectnn.png">
 </p>
 ## Paper
 **Will be released later..**
