@@ -12,7 +12,7 @@ As the basic task of point cloud learning, classification is fundamental but alw
 </p>
 
 ## Paper
-**Will be released later**
+**Will be released later..**
 
 ## Codes
-**Will be released later**
+**Will be released later..**
