@@ -17,12 +17,12 @@ Pytorch 0.4.0
 Cuda 9.1
 
 ## Experimental Results
-Synthetic Dataset: [ModelNet40](https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip)
+**Synthetic Dataset:** [ModelNet40](https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip)
 <p align="center">
   <img width="600" src="https://github.com/ShiQiu0419/GFNet/blob/master/modelnet40.png">
 </p>
 
-Real-object Dataset: [ScanObjectNN](https://github.com/hkust-vgd/scanobjectnn/)
+**Real-object Dataset: [ScanObjectNN](https://github.com/hkust-vgd/scanobjectnn/)**
 <p align="center">
   <img width="900" src="https://github.com/ShiQiu0419/GFNet/blob/master/scanobjectnn.png">
 </p>
