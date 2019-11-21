@@ -17,10 +17,11 @@ Synthetic Dataset: ModelNet40
   <img width="600" src="https://github.com/ShiQiu0419/GFNet/blob/master/modelnet40.png">
 </p>
 
-Real-object Dataset: ScanObjectNN
+Real-object Dataset: ScanObjectNN(https://github.com/hkust-vgd/scanobjectnn)
 <p align="center">
   <img width="900" src="https://github.com/ShiQiu0419/GFNet/blob/master/scanobjectnn.png">
 </p>
+
 ## Paper
 **Will be released later..**
 
