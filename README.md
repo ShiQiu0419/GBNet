@@ -11,6 +11,11 @@ As the basic task of point cloud learning, classification is fundamental but alw
   <img width="600" src="https://github.com/ShiQiu0419/Geometric-Feedback-Network-for-Point-Cloud-Classification/blob/master/overview2.png">
 </p>
 
+## Implementation
+Python 3.6
+Pytorch 0.4.0
+Cuda 9.1
+
 ## Experimental Results
 Synthetic Dataset: [ModelNet40](https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip)
 <p align="center">
