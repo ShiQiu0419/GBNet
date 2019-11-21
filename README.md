@@ -12,12 +12,12 @@ As the basic task of point cloud learning, classification is fundamental but alw
 </p>
 
 ## Implementation
-Python 3.6
-Pytorch 0.4.0
-Cuda 9.1
+* Python 3.6
+* Pytorch 0.4.0
+* Cuda 9.1
 
 ## Experimental Results
-**Synthetic Dataset:** [ModelNet40](https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip)
+**Synthetic Dataset: [ModelNet40](https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip)**
 <p align="center">
   <img width="600" src="https://github.com/ShiQiu0419/GFNet/blob/master/modelnet40.png">
 </p>
