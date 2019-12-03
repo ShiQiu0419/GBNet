@@ -30,5 +30,18 @@ As the basic task of point cloud learning, classification is fundamental but alw
 ## Paper
 **Will be released later..**
 
+## Citation
+
+If you find our paper is useful, please cite:
+
+        @misc{qiu2019geometric,
+            title={Geometric Feedback Network for Point Cloud Classification},
+            author={Shi Qiu and Saeed Anwar and Nick Barnes},
+            year={2019},
+            eprint={1911.12885},
+            archivePrefix={arXiv},
+            primaryClass={cs.CV}
+        }
+
 ## Codes
 **Will be released later..**
