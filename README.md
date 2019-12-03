@@ -28,7 +28,7 @@ As the basic task of point cloud learning, classification is fundamental but alw
 </p>
 
 ## Paper
-**Will be released later..**
+[[arXiv](https://arxiv.org/abs/1911.12885)]
 
 ## Citation
 
