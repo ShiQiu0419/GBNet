@@ -1,4 +1,4 @@
-# Geometric Feedback Network for Point Cloud Classification
+# Geometric Back-projection Network for Point Cloud Classification
 This repository is for Geometric Back-projection Network (GBNet) introduced in the following paper
 
 [Shi Qiu](https://shiqiu0419.github.io/), [Saeed Anwar](https://saeed-anwar.github.io/),  [Nick Barnes](http://users.cecs.anu.edu.au/~nmb/), "Geometric Back-projection Network for Point Cloud Classification" 
