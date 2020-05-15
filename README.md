@@ -34,11 +34,13 @@ As the basic task of point cloud learning, classification is fundamental but alw
 
 If you find our paper is useful, please cite:
 
-        @article{qiu2019geometric,
-          title={Geometric Back-projection Network for Point Cloud Classification},
-          author={Qiu, Shi and Anwar, Saeed and Barnes, Nick},
-          journal={arXiv preprint arXiv:1911.12885},
-          year={2019}
+        @misc{qiu2019geometric,
+            title={Geometric Back-projection Network for Point Cloud Classification},
+            author={Shi Qiu and Saeed Anwar and Nick Barnes},
+            year={2019},
+            eprint={1911.12885},
+            archivePrefix={arXiv},
+            primaryClass={cs.CV}
         }
 
 ## Codes
