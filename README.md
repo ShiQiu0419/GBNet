@@ -53,8 +53,8 @@ python main.py --exp_name=gbnet_scanobjectnn_eval --model=gbnet --dataset=ScanOb
 
 | Model            | Dataset             | Data Augmentation | Loss | Performance on Test Set            | Link   |
 |:----------------:|:-------------------:|:----------:|:-----------------:|:-------------------------------------------------------------------------------:|:------:|
-| GBNet | ModelNet40 | random scaling<br />and translation | cross-entropy<br />with label smoothing                 | xxx% overall accuracy<br />xxx% average class accuracy                                          | coming soon... |
-| GBNet | ScanObjectNN | random scaling<br />and translation | cross-entropy<br />with label smoothing                 | xxx% overall accuracy<br />xxx% average class accuracy                                          | coming soon... |
+| GBNet | ModelNet40 | random scaling<br />and translation | cross-entropy<br />with label smoothing                 | xx.x% overall accuracy<br />xx.x% average class accuracy                                          | coming soon... |
+| GBNet | ScanObjectNN | random scaling<br />and translation | cross-entropy<br />with label smoothing                 | xx.x% overall accuracy<br />xx.x% average class accuracy                                          | coming soon... |
 
 ## Citation
 
