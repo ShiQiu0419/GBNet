@@ -19,15 +19,14 @@ The paper can be downloaded from [arXiv](https://arxiv.org/abs/1911.12885) and [
 
 ## Sythetic Data Experiment 
 **Train the model:**
-* download [ModelNet40](https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip) and unzip it to ```./modelnet40/data```
-* ```cd ./modelnet40```
+* download [ModelNet40](https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip) and unzip it to ```./data```
 * then run (more settings can be modified in ```main.py```):    
 ```
 python main.py --exp_name=gbnet_modelnet40 --model=gbnet --dataset=modelnet40
 ```   
 
 **Test the pre-trained model:**
-* put the pre-trained model to ```./modelnet40/pretrained```
+* put the pre-trained model to ```./pretrained```
 * then run:
 ```
 python main.py --exp_name=gbnet_modelnet40_eval --model=gbnet --dataset=modelnet40 --eval=True --model_path=pretrained/gbnet_modelnet40.t7_model.t7
@@ -35,13 +34,18 @@ python main.py --exp_name=gbnet_modelnet40_eval --model=gbnet --dataset=modelnet
 
 ## Real-world Data Experiment 
 **Train the model:**
-* download [ScanObjectNN](https://github.com/hkust-vgd/scanobjectnn/) (Real-object Dataset) and unzip it to ```./scanobjectnn/data```
-* ```cd ./scanobjectnn```
-* ```python main.py``` (specific training settings/arguments can be modified in ```main.py```)  
+* download [ScanObjectNN](https://github.com/hkust-vgd/scanobjectnn/) and extract ```training_objectdataset_augmentedrot_scale75.h5``` and ```test_objectdataset_augmentedrot_scale75.h5``` to ```./data```
+* then run (more settings can be modified in ```main.py```):
+```
+python main.py --exp_name=gbnet_scanobjectnn --model=gbnet --dataset=ScanObjectNN
+``` 
 
 **Test the pre-trained model:**
-* put the pre-trained model to ```./scanobjectnn/pretrained```
-* ```python main.py --exp_name=gbnet_1024_eval --eval=True --model_path=pretrained//gbnet_scanobjectnn_model.t7```
+* put the pre-trained model to ```./pretrained```
+* then run:
+```
+python main.py --exp_name=gbnet_scanobjectnn_eval --model=gbnet --dataset=ScanObjectNN --eval=True --model_path=pretrained/gbnet_scanobjectnn.t7
+```
 
 ## Pre-trained models will be released soon.
 
