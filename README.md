@@ -20,7 +20,8 @@ The paper can be downloaded from [arXiv](https://arxiv.org/abs/1911.12885) and [
 ## Experiments
 **Synthetic Dataset: [ModelNet40](https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip)**  
 * ```cd ./modelnet40```
-* run ```python main.py```
+* ```python main.py```
+* training settings/arguments can be changed in ```main.py``` 
 
 **Real-object Dataset: [ScanObjectNN](https://github.com/hkust-vgd/scanobjectnn/)**
 
