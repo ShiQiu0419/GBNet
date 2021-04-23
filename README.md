@@ -67,4 +67,4 @@ python main.py --exp_name=gbnet_scanobjectnn_eval --model=gbnet --dataset=ScanOb
 | GBNet | ScanObjectNN | 1024 | random scaling<br />and translation | cross-entropy<br />with label smoothing                 | xx.x% overall accuracy<br />xx.x% mean class accuracy                                          | coming soon... |
 
 ## Acknowledgement
-The code is built on [DGCNN](https://github.com/WangYueFt/dgcnn/tree/master/pytorch). We thank the author for sharing the codes.
+The code is built on [DGCNN](https://github.com/WangYueFt/dgcnn/tree/master/pytorch). We thank the authors for sharing the codes.
