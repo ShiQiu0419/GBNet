@@ -66,7 +66,8 @@ python main.py --exp_name=gbnet_scanobjectnn_eval --model=gbnet --dataset=ScanOb
 | GBNet | ModelNet40 | 1024 | random scaling<br />and translation | cross-entropy<br />with label smoothing                 | xx.x% overall accuracy<br />xx.x% mean class accuracy                                          | coming soon... |
 | GBNet | ScanObjectNN | 1024 | random scaling<br />and translation | cross-entropy<br />with label smoothing                 | xx.x% overall accuracy<br />xx.x% mean class accuracy                                          | coming soon... |
 
-*For more discussion regarding the factors that may affect point cloud classification, please refer to [Revisiting Point Cloud Classification with a Simple and Effective Baseline](https://openreview.net/pdf?id=XwATtbX3oCz)*
+*For more discussion regarding the factors that may affect point cloud classification, please refer to the following paper:
+[Revisiting Point Cloud Classification with a Simple and Effective Baseline](https://openreview.net/pdf?id=XwATtbX3oCz)*
 
 ## Acknowledgement
 The code is built on [DGCNN](https://github.com/WangYueFt/dgcnn/tree/master/pytorch). We thank the authors for sharing the codes.
