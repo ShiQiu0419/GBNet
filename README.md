@@ -25,7 +25,7 @@ The paper can be downloaded from [arXiv](https://arxiv.org/abs/1911.12885) and [
 
 **Test the pre-trained model:**
 * put the pre-trained model to ```./modelnet40/pretrained```
-* ```python main.py --exp_name=gbnet_1024_eval --eval=True --model_path=pretrained/model.t7```
+* ```python main.py --exp_name=gbnet_1024_eval --eval=True --model_path=pretrained/gbnet_modelnet40_model.t7```
 
 ## Real-world Data Experiment 
 **Train the model:**
@@ -35,7 +35,7 @@ The paper can be downloaded from [arXiv](https://arxiv.org/abs/1911.12885) and [
 
 **Test the pre-trained model:**
 * put the pre-trained model to ```./scanobjectnn/pretrained```
-* ```python main.py --exp_name=gbnet_1024_eval --eval=True --model_path=pretrained/model.t7```
+* ```python main.py --exp_name=gbnet_1024_eval --eval=True --model_path=pretrained//gbnet_scanobjectnn_model.t7```
 
 ## Pre-trained models will be released soon.
 
