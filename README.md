@@ -17,7 +17,7 @@ The paper can be downloaded from [arXiv](https://arxiv.org/abs/1911.12885) and [
 * Pytorch 0.4.0 with Cuda 9.1
 * Higher Python/Pytorch/Cuda versions should also be compatible
 
-## ModelNEt40 Experiment 
+## ModelNet40 Experiment 
 **Train the model:**
 * download [ModelNet40](https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip) and unzip it to ```./data```
 * then run (more settings can be modified in ```main.py```):    
