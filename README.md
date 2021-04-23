@@ -19,6 +19,7 @@ The paper can be downloaded from [arXiv](https://arxiv.org/abs/1911.12885) and [
 
 ## Experiments
 **Synthetic Dataset: [ModelNet40](https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip)**  
+Train the model:  
 * ```cd ./modelnet40```
 * download and unzip the dataset to ```./modelnet40/data```
 * ```python main.py``` (specific training settings/arguments can be modified in ```main.py```)
