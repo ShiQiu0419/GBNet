@@ -19,7 +19,7 @@ The paper can be downloaded from [arXiv](https://arxiv.org/abs/1911.12885) and [
 
 ## ModelNet40 Experiment 
 **Train the model:**
-* download [ModelNet40](https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip) and unzip it to ```./data```
+* download [ModelNet40](https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip), unzip and move ```modelnet40_ply_hdf5_2048``` folder to ```./data```
 * then run (more settings can be modified in ```main.py```):    
 ```
 python main.py --exp_name=gbnet_modelnet40 --model=gbnet --dataset=modelnet40
@@ -34,7 +34,7 @@ python main.py --exp_name=gbnet_modelnet40_eval --model=gbnet --dataset=modelnet
 
 ## ScanObjectNN Experiment 
 **Train the model:**
-* download [ScanObjectNN](https://github.com/hkust-vgd/scanobjectnn/) and extract ```training_objectdataset_augmentedrot_scale75.h5``` and ```test_objectdataset_augmentedrot_scale75.h5``` to ```./data```
+* download [ScanObjectNN](https://github.com/hkust-vgd/scanobjectnn/), and extract both ```training_objectdataset_augmentedrot_scale75.h5``` and ```test_objectdataset_augmentedrot_scale75.h5``` files to ```./data```
 * then run (more settings can be modified in ```main.py```):
 ```
 python main.py --exp_name=gbnet_scanobjectnn --model=gbnet --dataset=ScanObjectNN
