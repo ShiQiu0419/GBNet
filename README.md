@@ -7,29 +7,20 @@ IEEE Transactions on Multimedia (TMM), 2021
 ## Paper
 The paper can be downloaded from [arXiv](https://arxiv.org/abs/1911.12885) and [IEEE early access](https://ieeexplore.ieee.org/document/9410405).
 
-## Introduction
-As the basic task of point cloud learning, classification is fundamental but always challenging. To address some unsolved problems of existing methods, we propose a CNN based network leveraging an idea of error-correcting feedback structure to comprehensively capture the local features of 3D point clouds. Besides, we also enrich the explicit and implicit geometric information of point clouds in low-level 3D space and high-level feature space, respectively. By applying an attention module based on channel affinity, that focuses on distinct channels, the learned feature map of our network can effectively avoid redundancy. The performance on synthetic and real-world datasets demonstrate the superiority and applicability of our network. Comparing with other state-of-the-art methods, our approach balances accuracy and efficiency.
-
-## Motivation
+## Network Architecture
 <p align="center">
-  <img width="600" src="https://github.com/ShiQiu0419/Geometric-Feedback-Network-for-Point-Cloud-Classification/blob/master/overview2.png">
+  <img width="600" src="https://github.com/ShiQiu0419/GBNet/blob/master/gbnet.png">
 </p>
 
-## Implementation
+## Implementation Platforms
 * Python 3.6
 * Pytorch 0.4.0
 * Cuda 9.1
 
-## Experimental Results
+## Experiments
 **Synthetic Dataset: [ModelNet40](https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip)**
-<p align="center">
-  <img width="600" src="https://github.com/ShiQiu0419/GFNet/blob/master/modelnet40.png">
-</p>
 
 **Real-object Dataset: [ScanObjectNN](https://github.com/hkust-vgd/scanobjectnn/)**
-<p align="center">
-  <img width="900" src="https://github.com/ShiQiu0419/GFNet/blob/master/scanobjectnn.png">
-</p>
 
 ## Citation
 
