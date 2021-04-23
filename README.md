@@ -19,6 +19,10 @@ The paper can be downloaded from [arXiv](https://arxiv.org/abs/1911.12885) and [
 
 ## Experiments
 **Synthetic Dataset: [ModelNet40](https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip)**
+``` 1024 points
+cd ./modelnet40
+python main.py --exp_name=dgcnn_1024 --model=dgcnn --num_points=1024 --k=20 --use_sgd=True
+```
 
 **Real-object Dataset: [ScanObjectNN](https://github.com/hkust-vgd/scanobjectnn/)**
 
