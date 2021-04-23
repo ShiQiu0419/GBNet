@@ -19,12 +19,9 @@ The paper can be downloaded from [arXiv](https://arxiv.org/abs/1911.12885) and [
 
 ## Experiments
 **Synthetic Dataset: [ModelNet40](https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip)**  
-* download the dataset and unzip it to ```./modelnet40/datas```
-* train the network by running
-  ```
-  cd ./modelnet40
-  python main.py
-  ```
+* ```cd ./modelnet40```
+* download the dataset and unzip it to ```modelnet40/data```
+* run ```python main.py```
 
 **Real-object Dataset: [ScanObjectNN](https://github.com/hkust-vgd/scanobjectnn/)**
 
