@@ -9,7 +9,7 @@ The paper can be downloaded from [arXiv](https://arxiv.org/abs/1911.12885) and [
 
 ## Network Architecture
 <p align="center">
-  <img width="600" src="https://github.com/ShiQiu0419/GBNet/blob/master/gbnet.png">
+  <img width="900" src="https://github.com/ShiQiu0419/GBNet/blob/master/gbnet.png">
 </p>
 
 ## Implementation Platforms
