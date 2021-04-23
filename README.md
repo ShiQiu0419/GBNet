@@ -26,6 +26,9 @@ The paper can be downloaded from [arXiv](https://arxiv.org/abs/1911.12885) and [
 
 **Test the pre-trained model:**
 * put the pre-trained model to ```./modelnet40/pretrained```
+``` 1024 points
+python main.py --exp_name=gbnet_modelnet40_eval --model=gbnet --dataset=modelnet40 --eval=True --model_path=pretrained/gbnet_modelnet40.t7_model.t7
+```
 * ```python main.py --exp_name=gbnet_modelnet40_eval --model=gbnet --dataset=modelnet40 --eval=True --model_path=pretrained/gbnet_modelnet40.t7_model.t7```
 
 ## Real-world Data Experiment 
