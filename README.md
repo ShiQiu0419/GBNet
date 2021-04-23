@@ -6,7 +6,7 @@ IEEE Transactions on Multimedia (TMM), 2021
 
 ## Paper and Citation
 The paper can be downloaded from [arXiv](https://arxiv.org/abs/1911.12885) and [IEEE early access](https://ieeexplore.ieee.org/document/9410405).  
-If you find our paper is helpful or use the code of this repo, please cite:
+If you find our paper/code is useful, please cite:
 
         @article{qiu2021geometric,
             title={Geometric Back-projection Network for Point Cloud Classification},
