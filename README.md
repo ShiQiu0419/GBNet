@@ -18,13 +18,15 @@ The paper can be downloaded from [arXiv](https://arxiv.org/abs/1911.12885) and [
 * Higher Python/Pytorch/Cuda versions should also be compatible
 
 ## Experiments
-**Synthetic Dataset: [ModelNet40](https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip)**  
-Train the model:
+[ModelNet40](https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip) (Sythetic Dataset)  
+**Train the model:**
 * ```cd ./modelnet40```
 * download and unzip the dataset to ```./modelnet40/data```
 * ```python main.py``` (specific training settings/arguments can be modified in ```main.py```)
-
-**Real-object Dataset: [ScanObjectNN](https://github.com/hkust-vgd/scanobjectnn/)**
+**Test the pre-trained model:**
+* put the pre-trained model to ```./modelnet40/pretrained```
+* ```python main.py --exp_name=gbnet_1024_eval --eval=True --model_path=pretrained/model.t7```
+[ScanObjectNN](https://github.com/hkust-vgd/scanobjectnn/) (Real-object Dataset)
 
 ## Citation
 
