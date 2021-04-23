@@ -51,9 +51,9 @@ python main.py --exp_name=gbnet_scanobjectnn_eval --model=gbnet --dataset=ScanOb
 * Python 3.6, Pytorch 0.4.0, Cuda 9.1
 * using default training settings as in ```main.py```
 
-| Model            | Dataset             | Data Augmentation | Loss | Performance              | Link   |
+| Model            | Dataset             | Data Augmentation | Loss | Performance on Test Set            | Link   |
 |:----------------:|:-------------------:|:----------:|:-----------------:|:-------------------------------------------------------------------------------:|:------:|
-| GBNet   | ModelNet40 | random scaling and translation | cross-entropy with label smoothing                 | Test set xxx% Overall Accuracy, xxx% Average Class Accuracy                                          | coming soon... |
+| GBNet   | ModelNet40 | random scaling and translation | cross-entropy with label smoothing                 | xxx% Overall Accuracy, xxx% Average Class Accuracy                                          | coming soon... |
 
 ## Citation
 
