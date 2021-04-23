@@ -47,7 +47,10 @@ python main.py --exp_name=gbnet_scanobjectnn --model=gbnet --dataset=ScanObjectN
 python main.py --exp_name=gbnet_scanobjectnn_eval --model=gbnet --dataset=ScanObjectNN --eval=True --model_path=pretrained/gbnet_scanobjectnn.t7
 ```
 
-## Pre-trained models will be released soon.
+## Pre-trained Models
+* Python 3.6
+* Pytorch 0.4.0 with Cuda 9.1
+* coming soon...
 
 ## Citation
 
