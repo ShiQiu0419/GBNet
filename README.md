@@ -61,7 +61,7 @@ python main.py --exp_name=gbnet_scanobjectnn_eval --model=gbnet --dataset=ScanOb
 * 2 Nvidia P100 GPUs
 * using default training settings as in ```main.py```
 
-| Model            | Dataset             |# Points             | Data Augmentation | Loss | Performance on Test Set            | Link   |
+| Model            | Dataset             |# Points             | Data<br />Augmentation | Loss | Performance<br />on Test Set            | Download<br />Link   |
 |:----------------:|:-------------------:|:-------------------:|:----------:|:-----------------:|:-------------------------------------------------------------------------------:|:------:|
 | GBNet | ModelNet40 | 1024 | random scaling<br />and translation | cross-entropy<br />with label smoothing                 | xx.x% overall accuracy<br />xx.x% mean class accuracy                                          | coming soon... |
 | GBNet | ScanObjectNN | 1024 | random scaling<br />and translation | cross-entropy<br />with label smoothing                 | xx.x% overall accuracy<br />xx.x% mean class accuracy                                          | coming soon... |
