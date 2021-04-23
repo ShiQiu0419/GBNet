@@ -26,7 +26,16 @@ The paper can be downloaded from [arXiv](https://arxiv.org/abs/1911.12885) and [
 **Test the pre-trained model:**
 * put the pre-trained model to ```./modelnet40/pretrained```
 * ```python main.py --exp_name=gbnet_1024_eval --eval=True --model_path=pretrained/model.t7```
-[ScanObjectNN](https://github.com/hkust-vgd/scanobjectnn/) (Real-object Dataset)
+
+## Real-world Data Experiment 
+**Train the model:**
+* download [ScanObjectNN](https://github.com/hkust-vgd/scanobjectnn/) (Real-object Dataset) and unzip it to ```./scanobjectnn/data```
+* ```cd ./scanobjectnn```
+* ```python main.py``` (specific training settings/arguments can be modified in ```main.py```)  
+
+**Test the pre-trained model:**
+* put the pre-trained model to ```./scanobjectnn/pretrained```
+* ```python main.py --exp_name=gbnet_1024_eval --eval=True --model_path=pretrained/model.t7```
 
 ## Citation
 
