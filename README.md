@@ -17,12 +17,11 @@ The paper can be downloaded from [arXiv](https://arxiv.org/abs/1911.12885) and [
 * Pytorch 0.4.0 with Cuda 9.1
 * Higher Python/Pytorch/Cuda versions should also be compatible
 
-## Sythetic Data Experiment
-[ModelNet40](https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip) 
+## Sythetic Data Experiment 
 **Train the model:**
+* download [ModelNet40](https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip) and unzip it to ```./modelnet40/data```
 * ```cd ./modelnet40```
-* download and unzip the dataset to ```./modelnet40/data```
-* ```python main.py``` (specific training settings/arguments can be modified in ```main.py```)
+* ```python main.py``` (specific training settings/arguments can be modified in ```main.py```)  
 **Test the pre-trained model:**
 * put the pre-trained model to ```./modelnet40/pretrained```
 * ```python main.py --exp_name=gbnet_1024_eval --eval=True --model_path=pretrained/model.t7```
