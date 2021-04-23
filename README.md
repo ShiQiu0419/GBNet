@@ -4,8 +4,17 @@ This repository is for Geometric Back-projection Network (GBNet) introduced in t
 [Shi Qiu](https://shiqiu0419.github.io/), [Saeed Anwar](https://saeed-anwar.github.io/),  [Nick Barnes](http://users.cecs.anu.edu.au/~nmb/), "Geometric Back-projection Network for Point Cloud Classification"  
 IEEE Transactions on Multimedia (TMM), 2021
 
-## Paper
-The paper can be downloaded from [arXiv](https://arxiv.org/abs/1911.12885) and [IEEE early access](https://ieeexplore.ieee.org/document/9410405).
+## Paper and Citation
+The paper can be downloaded from [arXiv](https://arxiv.org/abs/1911.12885) and [IEEE early access](https://ieeexplore.ieee.org/document/9410405).  
+If you find our paper is helpful or use the code of this repo, please cite:
+
+        @article{qiu2021geometric,
+            title={Geometric Back-projection Network for Point Cloud Classification},
+            author={Qiu, Shi and Anwar, Saeed and Barnes, Nick},
+            journal={IEEE Transactions on Multimedia},
+            year={2021},
+            doi={10.1109/TMM.2021.3074240}
+        }
 
 ## Network Architecture
 <p align="center">
@@ -56,14 +65,5 @@ python main.py --exp_name=gbnet_scanobjectnn_eval --model=gbnet --dataset=ScanOb
 | GBNet | ModelNet40 | 1024 | random scaling<br />and translation | cross-entropy<br />with label smoothing                 | xx.x% overall accuracy<br />xx.x% mean class accuracy                                          | coming soon... |
 | GBNet | ScanObjectNN | 1024 | random scaling<br />and translation | cross-entropy<br />with label smoothing                 | xx.x% overall accuracy<br />xx.x% mean class accuracy                                          | coming soon... |
 
-## Citation
-
-If you find our paper is useful, please cite:
-
-        @article{qiu2021geometric,
-            title={Geometric Back-projection Network for Point Cloud Classification},
-            author={Qiu, Shi and Anwar, Saeed and Barnes, Nick},
-            journal={IEEE Transactions on Multimedia},
-            year={2021},
-            doi={10.1109/TMM.2021.3074240}
-        }
+## Acknowledgement
+The code is built on [DGCNN](https://github.com/WangYueFt/dgcnn/tree/master/pytorch). We thank the authors for sharing their codes.
