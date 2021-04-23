@@ -14,8 +14,7 @@ The paper can be downloaded from [arXiv](https://arxiv.org/abs/1911.12885) and [
 
 ## Implementation Platforms
 * Python 3.6
-* Pytorch 0.4.0
-* Cuda 9.1
+* Pytorch 0.4.0 with Cuda 9.1 (higher versions should also be compatible)
 
 ## Experiments
 **Synthetic Dataset: [ModelNet40](https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip)**
