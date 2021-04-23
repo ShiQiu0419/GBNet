@@ -58,6 +58,7 @@ python main.py --exp_name=gbnet_scanobjectnn_eval --model=gbnet --dataset=ScanOb
 
 ## Pre-trained Models
 * Python 3.6, Pytorch 0.4.0, Cuda 9.1
+* 2 Nvidia P100 GPUs
 * using default training settings as in ```main.py```
 
 | Model            | Dataset             |# Points             | Data Augmentation | Loss | Performance on Test Set            | Link   |
