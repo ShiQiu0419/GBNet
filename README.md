@@ -17,7 +17,7 @@ The paper can be downloaded from [arXiv](https://arxiv.org/abs/1911.12885) and [
 * Pytorch 0.4.0 with Cuda 9.1
 * Higher Python/Pytorch/Cuda versions should also be compatible
 
-## Sythetic Data Experiment 
+## ModelNEt40 Experiment 
 **Train the model:**
 * download [ModelNet40](https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip) and unzip it to ```./data```
 * then run (more settings can be modified in ```main.py```):    
@@ -32,7 +32,7 @@ python main.py --exp_name=gbnet_modelnet40 --model=gbnet --dataset=modelnet40
 python main.py --exp_name=gbnet_modelnet40_eval --model=gbnet --dataset=modelnet40 --eval=True --model_path=pretrained/gbnet_modelnet40.t7_model.t7
 ```
 
-## Real-world Data Experiment 
+## ScanObjectNN Experiment 
 **Train the model:**
 * download [ScanObjectNN](https://github.com/hkust-vgd/scanobjectnn/) and extract ```training_objectdataset_augmentedrot_scale75.h5``` and ```test_objectdataset_augmentedrot_scale75.h5``` to ```./data```
 * then run (more settings can be modified in ```main.py```):
