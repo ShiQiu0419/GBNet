@@ -37,6 +37,8 @@ The paper can be downloaded from [arXiv](https://arxiv.org/abs/1911.12885) and [
 * put the pre-trained model to ```./scanobjectnn/pretrained```
 * ```python main.py --exp_name=gbnet_1024_eval --eval=True --model_path=pretrained/model.t7```
 
+## Pre-trained models will be released soon.
+
 ## Citation
 
 If you find our paper is useful, please cite:
