@@ -21,7 +21,8 @@ The paper can be downloaded from [arXiv](https://arxiv.org/abs/1911.12885) and [
 **Train the model:**
 * download [ModelNet40](https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip) and unzip it to ```./modelnet40/data```
 * ```cd ./modelnet40```
-* ```python main.py --exp_name=gbnet_modelnet40 --model=gbnet --dataset=modelnet40``` (other settings can be modified in ```main.py```)  
+* ```python main.py --exp_name=gbnet_modelnet40 --model=gbnet --dataset=modelnet40```  
+(other settings can be modified in ```main.py```)  
 
 **Test the pre-trained model:**
 * put the pre-trained model to ```./modelnet40/pretrained```
