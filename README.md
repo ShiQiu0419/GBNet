@@ -35,7 +35,7 @@ python main.py --exp_name=gbnet_modelnet40 --model=gbnet --dataset=modelnet40
 ```   
 
 **Test the pre-trained model:**
-* put the pre-trained model to ```./pretrained```
+* put the pre-trained model under ```./pretrained```
 * then run:
 ```
 python main.py --exp_name=gbnet_modelnet40_eval --model=gbnet --dataset=modelnet40 --eval=True --model_path=pretrained/gbnet_modelnet40.t7_model.t7
@@ -50,7 +50,7 @@ python main.py --exp_name=gbnet_scanobjectnn --model=gbnet --dataset=ScanObjectN
 ``` 
 
 **Test the pre-trained model:**
-* put the pre-trained model to ```./pretrained```
+* put the pre-trained model under ```./pretrained```
 * then run:
 ```
 python main.py --exp_name=gbnet_scanobjectnn_eval --model=gbnet --dataset=ScanObjectNN --eval=True --model_path=pretrained/gbnet_scanobjectnn.t7
