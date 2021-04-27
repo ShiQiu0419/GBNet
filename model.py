@@ -136,6 +136,68 @@ class CAA_Module(nn.Module):
         # residual connection with a learnable weight
         out = self.alpha*out + x 
         return out
+    
+    
+class ABEM_Module(nn.Module):
+    """ Channel-wise Affinity Attention module"""
+    def __init__(self, in_dim, out_dim, k):
+        super(ABEM_Module, self).__init__()
+
+        self.k = k
+        self.bn1 = nn.BatchNorm2d(out_dim)
+        self.conv1 = nn.Sequential(nn.Conv2d(in_dim*2, out_dim, kernel_size=1, bias=False),
+                                   self.bn1,
+                                   nn.LeakyReLU(negative_slope=0.2))
+
+        self.bn2 = nn.BatchNorm2d(in_dim)
+        self.conv2 = nn.Sequential(nn.Conv2d(out_dim, in_dim, kernel_size=[1,self.k], bias=False),
+                                   self.bn2,
+                                   nn.LeakyReLU(negative_slope=0.2))
+
+        self.bn3 = nn.BatchNorm2d(out_dim)
+        self.conv3 = nn.Sequential(nn.Conv2d(in_dim*2, out_dim, kernel_size=1, bias=False),
+                                   self.bn3,
+                                   nn.LeakyReLU(negative_slope=0.2))
+
+        self.caa1 = CAA_Module(out_dim)
+
+        self.bn4 = nn.BatchNorm2d(out_dim)
+        self.conv4 = nn.Sequential(nn.Conv2d(in_dim*2, out_dim, kernel_size=[1,self.k], bias=False),
+                                   self.bn4,
+                                   nn.LeakyReLU(negative_slope=0.2))
+
+        self.caa2 = CAA_Module(out_dim)
+
+    def forward(self,x):
+        #######################################
+        # Attentional Back-projection Edge Features Module (ABEM):
+        #######################################
+        # Prominent Feature Encoding
+        x1 = x # input
+        input_edge = get_graph_feature(x, k=self.k)
+        x = self.conv1(input_edge)
+        x2 = x # EdgeConv for input
+
+        x = self.conv2(x) # LFC
+        x = torch.squeeze(x, -1)
+        x3 = x # Back-projection signal
+
+        delta = x3 - x1 # Error signal
+
+        x = get_graph_feature(delta, k=self.k)  # EdgeConv for Error signal
+        x = self.conv3(x)
+        x4 = x
+
+        x = x2 + x4 # Attentional feedback
+        x = x.max(dim=-1, keepdim=False)[0]
+        x = self.caa1(x) 
+
+        # Fine-grained Feature Encoding
+        x_local = self.conv4(input_edge)
+        x_local = torch.squeeze(x_local, -1) 
+        x_local = self.caa2(x_local) # B,64,N
+
+        return x, x_local
 
 
 class PointNet(nn.Module):
@@ -244,108 +306,17 @@ class GBNet(nn.Module):
         self.args = args
         self.k = args.k
 
-        self.bn1 = nn.BatchNorm2d(64)
-        self.conv1 = nn.Sequential(nn.Conv2d(28, 64, kernel_size=1, bias=False),
-                                   self.bn1,
-                                   nn.LeakyReLU(negative_slope=0.2))
-        
-        self.bn11 = nn.BatchNorm2d(14)
-        self.conv11 = nn.Sequential(nn.Conv2d(64, 14, kernel_size=[1,args.k], bias=False),
-                                   self.bn11,
-                                   nn.LeakyReLU(negative_slope=0.2))
-        
-        self.bn12 = nn.BatchNorm2d(64)
-        self.conv12 = nn.Sequential(nn.Conv2d(28, 64, kernel_size=1, bias=False),
-                                   self.bn12,
-                                   nn.LeakyReLU(negative_slope=0.2))
+        self.abem1 = ABEM_Module(14, 64, self.k)
+        self.abem2 = ABEM_Module(64, 64, self.k)
+        self.abem3 = ABEM_Module(64, 128, self.k)
+        self.abem4 = ABEM_Module(128, 256, self.k)
 
-        self.caa1 = CAA_Module(64)
-        
-        self.bn13 = nn.BatchNorm2d(64)
-        self.conv13 = nn.Sequential(nn.Conv2d(28, 64, kernel_size=[1,args.k], bias=False),
-                                   self.bn13,
-                                   nn.LeakyReLU(negative_slope=0.2))
-
-        self.caa11 = CAA_Module(64)
-
-        self.bn2 = nn.BatchNorm2d(64)
-        self.conv2 = nn.Sequential(nn.Conv2d(64 * 2, 64, kernel_size=1, bias=False),
-                                   self.bn2,
-                                   nn.LeakyReLU(negative_slope=0.2))
-
-        self.bn21 = nn.BatchNorm2d(64)
-        self.conv21 = nn.Sequential(nn.Conv2d(64, 64, kernel_size=[1,args.k], bias=False),
-                                   self.bn21,
-                                   nn.LeakyReLU(negative_slope=0.2))
-
-        self.bn22 = nn.BatchNorm2d(64)
-        self.conv22 = nn.Sequential(nn.Conv2d(64 * 2, 64, kernel_size=1, bias=False),
-                                   self.bn22,
-                                   nn.LeakyReLU(negative_slope=0.2))
-
-        self.caa2 = CAA_Module(64)
-
-        self.bn23 = nn.BatchNorm2d(64)
-        self.conv23 = nn.Sequential(nn.Conv2d(128, 64, kernel_size=[1,args.k], bias=False),
-                                   self.bn23,
-                                   nn.LeakyReLU(negative_slope=0.2))
-
-        self.caa21 = CAA_Module(64)
-
-        self.bn3 = nn.BatchNorm2d(128)
-        self.conv3 = nn.Sequential(nn.Conv2d(64 * 2, 128, kernel_size=1, bias=False),
-                                   self.bn3,
-                                   nn.LeakyReLU(negative_slope=0.2))
-
-        self.bn31 = nn.BatchNorm2d(64)
-        self.conv31 = nn.Sequential(nn.Conv2d(64 * 2, 64, kernel_size=[1,args.k], bias=False),
-                                   self.bn31,
-                                   nn.LeakyReLU(negative_slope=0.2))
-
-        self.bn32 = nn.BatchNorm2d(128)
-        self.conv32 = nn.Sequential(nn.Conv2d(64 * 2, 128, kernel_size=1, bias=False),
-                                   self.bn32,
-                                   nn.LeakyReLU(negative_slope=0.2))
-
-        self.caa3 = CAA_Module(128)
-
-        self.bn33 = nn.BatchNorm2d(128)
-        self.conv33 = nn.Sequential(nn.Conv2d(64 * 2, 128, kernel_size=[1,args.k], bias=False),
-                                   self.bn33,
-                                   nn.LeakyReLU(negative_slope=0.2))
-
-        self.caa31 = CAA_Module(128)
-
-        self.bn4 = nn.BatchNorm2d(256)
-        self.conv4 = nn.Sequential(nn.Conv2d(128 * 2, 256, kernel_size=1, bias=False),
-                                   self.bn4,
-                                   nn.LeakyReLU(negative_slope=0.2))
-
-        self.bn41 = nn.BatchNorm2d(128)
-        self.conv41 = nn.Sequential(nn.Conv2d(128 * 2, 128, kernel_size=[1,args.k], bias=False),
-                                   self.bn41,
-                                   nn.LeakyReLU(negative_slope=0.2))
-
-        self.bn42 = nn.BatchNorm2d(256)
-        self.conv42 = nn.Sequential(nn.Conv2d(128 * 2, 256, kernel_size=1, bias=False),
-                                   self.bn42,
-                                   nn.LeakyReLU(negative_slope=0.2))
-
-        self.caa4 = CAA_Module(256)
-
-        self.bn43 = nn.BatchNorm2d(256)
-        self.conv43 = nn.Sequential(nn.Conv2d(128 * 2, 256, kernel_size=[1,args.k], bias=False),
-                                   self.bn43,
-                                   nn.LeakyReLU(negative_slope=0.2))
-
-        self.caa41 = CAA_Module(256)
-
-        self.bn5 = nn.BatchNorm1d(args.emb_dims)
-        self.conv5 = nn.Sequential(nn.Conv1d(1024, args.emb_dims, kernel_size=1, bias=False),
-                                   self.bn5,
+        self.bn = nn.BatchNorm1d(args.emb_dims)
+        self.conv = nn.Sequential(nn.Conv1d(1024, args.emb_dims, kernel_size=1, bias=False),
+                                   self.bn,
                                    nn.LeakyReLU(negative_slope=0.2))
      
-        self.caa5 = CAA_Module(1024)
+        self.caa = CAA_Module(1024)
 
         self.linear1 = nn.Linear(args.emb_dims * 2, 512, bias=False)
         self.bn_linear1 = nn.BatchNorm1d(512)
@@ -358,133 +329,26 @@ class GBNet(nn.Module):
     def forward(self, x):
         # x: B,3,N
         batch_size = x.size(0)
-        #######################################
+
         # Geometric Point Descriptor:
-        #######################################
         x = geometric_point_descriptor(x) # B,14,N
 
-        #######################################
         # 1st Attentional Back-projection Edge Features Module (ABEM):
-        #######################################
-        # Prominent Feature Encoding
-        x1_1 = x # input
-        input_edge = get_graph_feature(x, k=self.k)
-        x = self.conv1(input_edge)
-        x1_2 = x # EdgeConv for input
+        x1, x1_local = self.abem1(x)
 
-        x = self.conv11(x) # LFC
-        x = torch.squeeze(x, -1)
-        x1_3 = x # Back-projection signal
-
-        delta_1 = x1_3 - x1_1 # Error signal
-
-        x = get_graph_feature(delta_1, k=self.k)  # EdgeConv for Error signal
-        x = self.conv12(x)
-        x1_4 = x
-
-        x = x1_2 + x1_4 # Attentional feedback
-        x1 = x.max(dim=-1, keepdim=False)[0]
-        x1 = self.caa1(x1) # B,64,N
-
-        # Fine-grained Feature Encoding
-        x1_local = self.conv13(input_edge)
-        x1_local = torch.squeeze(x1_local, -1) 
-        x1_local = self.caa11(x1_local) # B,64,N
-
-        #######################################
         # 2nd Attentional Back-projection Edge Features Module (ABEM):
-        #######################################
-        # Prominent Feature Encoding
-        x2_1 = x1
-        input_edge = get_graph_feature(x1, k=self.k)
-        x = self.conv2(input_edge)
-        x2_2 = x
+        x2, x2_local = self.abem2(x1)
 
-        x = self.conv21(x) 
-        x = torch.squeeze(x, -1) 
-        x2_3 = x
-
-        delta_2 = x2_3 - x2_1 
-
-        x = get_graph_feature(delta_2, k=self.k) 
-        x = self.conv22(x) 
-        x2_4 = x
-
-        x = x2_2 + x2_4 
-        x2 = x.max(dim=-1, keepdim=False)[0] 
-        x2 = self.caa2(x2) # B,64,N
-
-        # Fine-grained Feature Encoding
-        x2_local = self.conv23(input_edge) 
-        x2_local = torch.squeeze(x2_local, -1) 
-        x2_local = self.caa21(x2_local) # B,64,N
-
-        #######################################
         # 3rd Attentional Back-projection Edge Features Module (ABEM):
-        #######################################
-        # Prominent Feature Encoding
-        x3_1 = x2
-        input_edge = get_graph_feature(x2, k=self.k)
-        x = self.conv3(input_edge)
-        x3_2 = x
+        x3, x3_local = self.abem3(x2)
 
-        x = self.conv31(x) 
-        x = torch.squeeze(x, -1) 
-        x3_3 = x
-
-        delta_3 = x3_3 - x3_1 
-
-        x = get_graph_feature(delta_3, k=self.k) 
-        x = self.conv32(x)
-        x3_4 = x
-
-        x = x3_2 + x3_4
-        x3 = x.max(dim=-1, keepdim=False)[0]  
-        x3 = self.caa3(x3) # B,128,N
-
-        # Fine-grained Feature Encoding
-        x3_local = self.conv33(input_edge)
-        x3_local = torch.squeeze(x3_local, -1)
-        x3_local = self.caa31(x3_local) # B,128,N
-
-        #######################################
         # 4th Attentional Back-projection Edge Features Module (ABEM):
-        #######################################
-        # Prominent Feature Encoding
-        x4_1 = x3 
-        input_edge = get_graph_feature(x3, k=self.k) 
-        x = self.conv4(input_edge) 
-        x4_2 = x
-
-        x = self.conv41(x) 
-        x = torch.squeeze(x, -1) 
-        x4_3 = x
-
-        delta_4 = x4_3 - x4_1 
-
-        x = get_graph_feature(delta_4, k=self.k) 
-        x = self.conv42(x)
-        x4_4 = x
-
-        x = x4_2 + x4_4 
-        x4 = x.max(dim=-1, keepdim=False)[0]  
-        x4 = self.caa4(x4) # B,256,N
-
-        # Fine-grained Feature Encoding
-        x4_local = self.conv43(input_edge) 
-        x4_local = torch.squeeze(x4_local, -1) 
-        x4_local = self.caa41(x4_local) # B,256,N
-
-        #######################################
-        # End of all 4 ABEMs 
-        #######################################
+        x4, x4_local = self.abem4(x3)
 
         # Concatenate both prominent and fine-grained outputs of 4 ABEMs:
         x = torch.cat((x1, x1_local, x2, x2_local, x3, x3_local, x4, x4_local), dim=1)  # B,(64+64+128+256)x2,N
-        # MLP
-        x = self.conv5(x) # B,1024,N
-        # CAA 
-        x = self.caa5(x)
+        x = self.conv(x) 
+        x = self.caa(x) # B,1024,N
 
         # global embedding
         global_max = F.adaptive_max_pool1d(x, 1).view(batch_size, -1)
