@@ -1,4 +1,4 @@
-# Datasets for Training/Test
+# Directory Structure
 ```bash
 ├── data
 │   ├── modelnet40_ply_hdf5_2048
@@ -14,6 +14,11 @@
 │   │   ├── shape_names.txt
 │   ├── test_objectdataset_augmentedrot_scale75.h5
 │   └── training_objectdataset_augmentedrot_scale75.h5
-├── training_objectdataset_augmentedrot_scale75.h5
-└── test_objectdataset_augmentedrot_scale75.h5
+├── pretrained
+│   ├── gbnet_modelnet40.t7
+│   └── gbnet_scanobjectnn.t7
+├── main.py
+├── model.py
+├── data.py
+└── util.py
 ```
