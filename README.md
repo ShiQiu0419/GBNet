@@ -63,8 +63,8 @@ python main.py --exp_name=gbnet_scanobjectnn_eval --model=gbnet --dataset=ScanOb
 
 | Model            | Dataset             |#Points             | Data<br />Augmentation | Loss | Performance<br />on Test Set            | Download<br />Link   |
 |:----------------:|:-------------------:|:-------------------:|:----------:|:-----------------:|:-------------------------------------------------------------------------------:|:------:|
-| GBNet | ModelNet40 | 1024 | random scaling<br />and translation | cross-entropy<br />with label smoothing                 | overall accuracy： xx.x%<br />mean class accuracy： xx.x%                                          | coming soon... |
-| GBNet | ScanObjectNN | 1024 | random scaling<br />and translation | cross-entropy<br />with label smoothing                 | overall accuracy: **80.47%**<br />mean class accuracy: **77.48%**                                           | [google drive](https://drive.google.com/file/d/1O7gImLlyhkSnPiP8_x6YZruJRjL59aLO/view?usp=sharing) |
+| GBNet | ModelNet40 | 1024 | random scaling<br />and translation | cross-entropy<br />with label smoothing                 | overall accuracy： xx.x%<br />mean class accuracy： xx.x%                                          | coming soon |
+| GBNet | ScanObjectNN | 1024 | random scaling<br />and translation | cross-entropy<br />with label smoothing                 | overall accuracy: **80.47%**<br />mean class accuracy: **77.48%**                                           | coming soon |
 
 For more discussions regarding the factors that may affect point cloud classification,  
 please refer to the following paper:  
