@@ -11,7 +11,7 @@
 │   │   ├── ply_data_test1.h5
 │   │   ├── train_files.text
 │   │   ├── test_files.txt
-│   │   ├── shape_names.txt
+│   │   └── shape_names.txt
 │   ├── test_objectdataset_augmentedrot_scale75.h5
 │   └── training_objectdataset_augmentedrot_scale75.h5
 ├── pretrained
