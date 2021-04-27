@@ -7,7 +7,7 @@ If you have interets in the original training logs, please feel free to contact 
 
 | Model            | Dataset             |#Points             | Data<br />Augmentation | Loss | Performance<br />on Test Set            | Download<br />Link   |
 |:----------------:|:-------------------:|:-------------------:|:----------:|:-----------------:|:-------------------------------------------------------------------------------:|:------:|
-| GBNet | ModelNet40 | 1024 | random scaling<br />and translation | cross-entropy<br />with label smoothing                 | overall accuracy：xx.x%<br />mean class accuracy: xx.x%                                          | coming soon |
+| GBNet | ModelNet40 | 1024 | random scaling<br />and translation | cross-entropy<br />with label smoothing                 | overall accuracy: xx.x%<br />mean class accuracy: xx.x%                                          | coming soon |
 | GBNet | ScanObjectNN | 1024 | random scaling<br />and translation | cross-entropy<br />with label smoothing                 | overall accuracy: xx.x%<br />mean class accuracy: xx.x%                                           | coming soon |
 
 For more discussions regarding the factors that may affect point cloud classification,  
