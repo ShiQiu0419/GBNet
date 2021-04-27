@@ -190,12 +190,12 @@ class ABEM_Module(nn.Module):
 
         x = x2 + x4 # Attentional feedback
         x = x.max(dim=-1, keepdim=False)[0]
-        x = self.caa1(x) 
+        x = self.caa1(x) # B,out_dim,N
 
         # Fine-grained Feature Encoding
         x_local = self.conv4(input_edge)
         x_local = torch.squeeze(x_local, -1) 
-        x_local = self.caa2(x_local) # B,64,N
+        x_local = self.caa2(x_local) # B,out_dim,N
 
         return x, x_local
 
