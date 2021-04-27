@@ -21,15 +21,15 @@ If you find our paper/code is useful, please cite:
   <img width="900" src="https://github.com/ShiQiu0419/GBNet/blob/master/gbnet.png">
 </p>
 
-## Implementation Platforms
-* Python 3.6
-* Pytorch 0.4.0 with Cuda 9.1
-* Higher Python/Pytorch/Cuda versions should also be compatible
-
 ## Updates
 * **23/04/2021** Codes for both ```ModelNet40``` and ```ScanObjectNN``` are available now. 
 * **27/04/2021** Update ```model.py``` by adding ```class ABEM_Module(nn.Module)```.
 * To be continued.
+
+## Implementation Platforms
+* Python 3.6
+* Pytorch 0.4.0 with Cuda 9.1
+* Higher Python/Pytorch/Cuda versions should also be compatible
 
 ## ModelNet40 Experiment 
 **Train the model:**
