@@ -9,13 +9,6 @@
 │   ├── js
 │   │   ├── **/*.js
 │   └── partials/template
-├── dist (or build)
-├── node_modules
-├── bower_components (if using bower)
-├── test
-├── Gruntfile.js/gulpfile.js
-├── README.md
-├── package.json
-├── bower.json (if using bower)
-└── .gitignore
+├── ```training_objectdataset_augmentedrot_scale75.h5```
+└── test_objectdataset_augmentedrot_scale75.h5
 ```
