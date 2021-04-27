@@ -28,7 +28,7 @@ If you find our paper/code is useful, please cite:
 
 ## Updates
 * **23/04/2021** Codes released!
-* **27/04/2021** Update GBNet codes by making the ABEM module as a class!
+* **27/04/2021** Update ```model.py``` by adding ```class ABEM_Module(nn.Module)```!
 * To be continued.
 
 ## ModelNet40 Experiment 
