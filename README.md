@@ -26,6 +26,11 @@ If you find our paper/code is useful, please cite:
 * Pytorch 0.4.0 with Cuda 9.1
 * Higher Python/Pytorch/Cuda versions should also be compatible
 
+## Updates
+* **23/04/2021** Codes released!
+* **27/04/2021** Update GBNet codes by making the ABEM module as a class!
+* To be continued.
+
 ## ModelNet40 Experiment 
 **Train the model:**
 * download [ModelNet40](https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip), unzip and move ```modelnet40_ply_hdf5_2048``` folder to ```./data```
