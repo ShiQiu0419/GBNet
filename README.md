@@ -27,8 +27,8 @@ If you find our paper/code is useful, please cite:
 * Higher Python/Pytorch/Cuda versions should also be compatible
 
 ## Updates
-* **23/04/2021** Codes released!
-* **27/04/2021** Update ```model.py``` by adding ```class ABEM_Module(nn.Module)```!
+* **23/04/2021** Codes for both ```ModelNet40``` and ```ScanObjectNN``` are available now. 
+* **27/04/2021** Update ```model.py``` by adding ```class ABEM_Module(nn.Module)```.
 * To be continued.
 
 ## ModelNet40 Experiment 
