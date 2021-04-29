@@ -24,7 +24,7 @@ If you find our paper/code is useful, please cite:
 ## Updates
 * **23/04/2021** Codes for both ```ModelNet40``` and ```ScanObjectNN``` are available now. 
 * **27/04/2021** Update ```model.py``` by adding ```class ABEM_Module(nn.Module)```.
-* **29/04/2021** Pre-trained model ([google drive](https://drive.google.com/file/d/12RdQVWPhijBXo-ByeK61BJ84TjkSi-_5/view?usp=sharing)) on ScanObjectNN has been released.
+* **29/04/2021** Pre-trained model on ScanObjectNN is available at ([google drive](https://drive.google.com/file/d/12RdQVWPhijBXo-ByeK61BJ84TjkSi-_5/view?usp=sharing)).
 * To be continued.
 
 ## Implementation Platforms
