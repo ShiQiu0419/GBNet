@@ -24,7 +24,7 @@ If you find our paper/code is useful, please cite:
 ## Updates
 * **23/04/2021** Codes for both ```ModelNet40``` and ```ScanObjectNN``` are available now. 
 * **27/04/2021** Update ```model.py``` by adding ```class ABEM_Module(nn.Module)```.
-* **29/04/2021** Pre-trained model on ScanObjectNN is available at ([google drive](https://drive.google.com/file/d/12RdQVWPhijBXo-ByeK61BJ84TjkSi-_5/view?usp=sharing)).
+* **29/04/2021** Pre-trained model (OA: **80.50%**, mAcc: **77.31%**) on ScanObjectNN is available at [google drive](https://drive.google.com/file/d/12RdQVWPhijBXo-ByeK61BJ84TjkSi-_5/view?usp=sharing).
 * To be continued.
 
 ## Implementation Platforms
@@ -69,8 +69,8 @@ python main.py --exp_name=gbnet_scanobjectnn_eval --model=gbnet --dataset=ScanOb
 
 | Model            | Dataset             |#Points             | Data<br />Augmentation | Loss | Performance<br />on Test Set            | Download<br />Link   |
 |:----------------:|:-------------------:|:-------------------:|:----------:|:-----------------:|:-------------------------------------------------------------------------------:|:------:|
-| GBNet | ModelNet40 | 1024 | random scaling<br />and translation | cross-entropy<br />with label smoothing                 | overall accuracy: xx.x%<br />mean class accuracy: xx.x%                                          | coming soon |
-| GBNet | ScanObjectNN | 1024 | random scaling<br />and translation | cross-entropy<br />with label smoothing                 | overall accuracy: **80.50%**<br />mean class accuracy: **77.31%**                                           | [google drive](https://drive.google.com/file/d/12RdQVWPhijBXo-ByeK61BJ84TjkSi-_5/view?usp=sharing) |
+| GBNet | ModelNet40 | 1024 | random scaling<br />and translation | cross-entropy<br />with label smoothing                 | overall accuracy: xx.x%<br />average class accuracy: xx.x%                                          | coming soon |
+| GBNet | ScanObjectNN | 1024 | random scaling<br />and translation | cross-entropy<br />with label smoothing                 | overall accuracy: **80.50%**<br />average class accuracy: **77.31%**                                           | [google drive](https://drive.google.com/file/d/12RdQVWPhijBXo-ByeK61BJ84TjkSi-_5/view?usp=sharing) |
 
 For more discussions regarding the factors that may affect point cloud classification,  
 please refer to the following paper:  
