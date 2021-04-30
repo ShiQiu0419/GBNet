@@ -1,11 +1,10 @@
 # Geometric Back-projection Network for Point Cloud Classification
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/geometric-feedback-network-for-point-cloud/3d-point-cloud-classification-on-scanobjectnn)](https://paperswithcode.com/sota/3d-point-cloud-classification-on-scanobjectnn?p=geometric-feedback-network-for-point-cloud)  
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/geometric-feedback-network-for-point-cloud/3d-point-cloud-classification-on-modelnet40)](https://paperswithcode.com/sota/3d-point-cloud-classification-on-modelnet40?p=geometric-feedback-network-for-point-cloud)
 This repository is for Geometric Back-projection Network (GBNet) introduced in the following paper:  
 **Geometric Back-projection Network for Point Cloud Classification**  
 [Shi Qiu](https://shiqiu0419.github.io/), [Saeed Anwar](https://saeed-anwar.github.io/),  [Nick Barnes](http://users.cecs.anu.edu.au/~nmb/)    
 IEEE Transactions on Multimedia (TMM), 2021
-
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/geometric-feedback-network-for-point-cloud/3d-point-cloud-classification-on-scanobjectnn)](https://paperswithcode.com/sota/3d-point-cloud-classification-on-scanobjectnn?p=geometric-feedback-network-for-point-cloud)  
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/geometric-feedback-network-for-point-cloud/3d-point-cloud-classification-on-modelnet40)](https://paperswithcode.com/sota/3d-point-cloud-classification-on-modelnet40?p=geometric-feedback-network-for-point-cloud) 
 ## Paper and Citation
 The paper can be downloaded from [arXiv](https://arxiv.org/abs/1911.12885) and [IEEE early access](https://ieeexplore.ieee.org/document/9410405).  
 If you find our paper/code is useful, please cite:
