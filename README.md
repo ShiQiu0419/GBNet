@@ -27,6 +27,7 @@ If you find our paper/code is useful, please cite:
 * **27/04/2021** Update ```model.py``` by adding ```class ABEM_Module(nn.Module)```.
 * **29/04/2021** Pre-trained model (OA: **80.50%**, mAcc: **77.31%**) on ScanObjectNN ~~is available at google drive.~~
 * **30/04/2021** Update a pre-trained model (OA: **80.99%**, mAcc: **78.21%**) on ScanObjectNN via [google drive](https://drive.google.com/file/d/1Fh17b3kruQiGzdgMV8kdzyEUanKsy-PV/view?usp=sharing).
+* **03/05/2021** Pre-trained model (OA: **80.50%**, mAcc: **77.31%**) on ModelNet40 is available at [google drive](https://drive.google.com/file/d/1EcjzYv0c_TB3AJQ9ZJpHl_UqP2m-mRTK/view?usp=sharing).
 * To be continued.
 
 ## Implementation Platforms
@@ -71,7 +72,7 @@ python main.py --exp_name=gbnet_scanobjectnn_eval --model=gbnet --dataset=ScanOb
 
 | Model            | Dataset             |#Points             | Data<br />Augmentation | Loss | Performance<br />on Test Set            | Download<br />Link   |
 |:----------------:|:-------------------:|:-------------------:|:----------:|:-----------------:|:-------------------------------------------------------------------------------:|:------:|
-| GBNet | ModelNet40 | 1024 | random scaling<br />and translation | cross-entropy<br />with label smoothing                 | overall accuracy: xx.x%<br />average class accuracy: xx.x%                                          | coming soon |
+| GBNet | ModelNet40 | 1024 | random scaling<br />and translation | cross-entropy<br />with label smoothing                 | overall accuracy: **93.80%**<br />average class accuracy: **91.04%**                                          | [google drive](https://drive.google.com/file/d/1EcjzYv0c_TB3AJQ9ZJpHl_UqP2m-mRTK/view?usp=sharing) |
 | GBNet | ScanObjectNN | 1024 | random scaling<br />and translation | cross-entropy<br />with label smoothing                 | overall accuracy: **80.99%**<br />average class accuracy: **78.21%**                                           | [google drive](https://drive.google.com/file/d/1Fh17b3kruQiGzdgMV8kdzyEUanKsy-PV/view?usp=sharing) |
 
 For more discussions regarding the factors that may affect point cloud classification,  
