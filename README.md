@@ -28,7 +28,6 @@ If you find our paper/code is useful, please cite:
 * **29/04/2021** Pre-trained model (OA: **80.50%**, mAcc: **77.31%**) on ScanObjectNN ~~is available at google drive.~~
 * **30/04/2021** Update a pre-trained model (OA: **80.99%**, mAcc: **78.21%**) on ScanObjectNN via [google drive](https://drive.google.com/file/d/1Fh17b3kruQiGzdgMV8kdzyEUanKsy-PV/view?usp=sharing).
 * **03/05/2021** Pre-trained model (OA: **93.80%**, mAcc: **91.04%**) on ModelNet40 is available at [google drive](https://drive.google.com/file/d/1EcjzYv0c_TB3AJQ9ZJpHl_UqP2m-mRTK/view?usp=sharing).
-* To be continued.
 
 ## Implementation Platforms
 * Python 3.6
