@@ -139,7 +139,7 @@ class CAA_Module(nn.Module):
     
     
 class ABEM_Module(nn.Module):
-    """ Channel-wise Affinity Attention module"""
+    """ Attentional Back-projection Edge Features Module (ABEM)"""
     def __init__(self, in_dim, out_dim, k):
         super(ABEM_Module, self).__init__()
 
@@ -169,9 +169,6 @@ class ABEM_Module(nn.Module):
         self.caa2 = CAA_Module(out_dim)
 
     def forward(self,x):
-        #######################################
-        # Attentional Back-projection Edge Features Module (ABEM):
-        #######################################
         # Prominent Feature Encoding
         x1 = x # input
         input_edge = get_graph_feature(x, k=self.k)
