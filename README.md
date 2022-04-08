@@ -6,14 +6,16 @@ This repository is for Geometric Back-projection Network (GBNet) introduced in t
 [Shi Qiu](https://shiqiu0419.github.io/), [Saeed Anwar](https://saeed-anwar.github.io/),  [Nick Barnes](http://users.cecs.anu.edu.au/~nmb/)    
 IEEE Transactions on Multimedia (TMM), 2021  
 ## Paper and Citation
-The paper can be downloaded from [arXiv](https://arxiv.org/abs/1911.12885) and [IEEE early access](https://ieeexplore.ieee.org/document/9410405).  
+The paper can be downloaded from [arXiv](https://arxiv.org/abs/1911.12885) and [IEEE](https://ieeexplore.ieee.org/document/9410405).  
 If you find our paper/code is useful, please cite:
 
-        @article{qiu2021geometric,
+        @article{qiu2022geometric,
             title={Geometric Back-projection Network for Point Cloud Classification},
             author={Qiu, Shi and Anwar, Saeed and Barnes, Nick},
             journal={IEEE Transactions on Multimedia},
-            year={2021},
+            year={2022},
+            volume={24},
+            pages={1943-1955},
             doi={10.1109/TMM.2021.3074240}
         }
 
